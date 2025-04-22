@@ -9,6 +9,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read #This is required for actions/checkout
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
